@@ -63,7 +63,7 @@ export default function NavrhKonstrukciiPage() {
         <PhotoGallery photos={main} />
       </div>
 
-      <div className="service-description">
+      <div className="service-description plain-description">
         <h4>Realizované projekty:</h4>
 
         <h5>Rakoluby</h5>

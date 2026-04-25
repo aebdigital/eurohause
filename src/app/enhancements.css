@@ -597,3 +597,14 @@ button:hover .btn-roll-hover,
   height: 100% !important;
   object-fit: cover !important;
 }
+
+/* ===== Plain Service Description ===== */
+.plain-description {
+  background: transparent !important;
+  padding: 0 !important;
+  border-left: none !important;
+}
+
+.plain-description h4 {
+  margin-top: 40px !important;
+}

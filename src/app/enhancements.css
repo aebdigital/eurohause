@@ -283,6 +283,27 @@ button:hover .btn-roll-hover,
   }
 }
 
+/* ===== 3x1 Gallery Grid ===== */
+.photo-grid-3x1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.photo-grid-3x1 .photo-item {
+  aspect-ratio: 4/3;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .photo-grid-3x1 {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ===== Lightbox Overlay ===== */
 .lightbox {
   position: fixed;

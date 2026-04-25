@@ -639,3 +639,34 @@ button:hover .btn-roll-hover,
     box-shadow: 0 4px 12px rgba(38, 82, 134, 0.2);
   }
 }
+
+/* ===== Klampiar Contact Section ===== */
+.klampiar-contact-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.klampiar-logo-container {
+  flex-shrink: 0;
+}
+
+.klampiar-logo-container img {
+  max-height: 140px;
+  width: auto;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .klampiar-contact-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+  }
+  
+  .klampiar-logo-container {
+    order: 2;
+  }
+}

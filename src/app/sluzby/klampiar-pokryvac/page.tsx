@@ -32,7 +32,7 @@ export default function KlampiarPokryvacPage() {
       service={service}
       intro="Pokrývačské, klampiarské práce. Predaj strešných krytín plechové, škridlové, PVC fólie, odkvapové systémy. Kompletná realizácia štítových, valbových, pultových a plochých striech."
     >
-      <div style={{ display: "flex", alignItems: "flex-start" }}>
+      <div className="klampiar-contact-wrapper">
         <div className="service-contact-info">
           <h4>Kontakt pre klampiarské práce:</h4>
           <p>
@@ -46,13 +46,9 @@ export default function KlampiarPokryvacPage() {
             <a href="mailto:marcobartovic1995@gmail.com">marcobartovic1995@gmail.com</a>
           </p>
         </div>
-        <div style={{ marginLeft: 20, flexShrink: 0 }}>
+        <div className="klampiar-logo-container">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/sources/klampiar/klampiar-logo.jpg"
-            alt="Klampiarstvo logo"
-            style={{ maxHeight: 120, width: "auto" }}
-          />
+          <img src="/sources/klampiar/klampiar-logo.jpg" alt="Klampiarstvo logo" />
         </div>
       </div>
 

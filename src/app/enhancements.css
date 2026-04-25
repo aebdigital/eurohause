@@ -553,3 +553,29 @@ button:hover .btn-roll-hover,
     color: #333;
   }
 }
+
+/* ===== Standardized Section Spacing ===== */
+.services-header, .reviews-header, .section-title {
+  margin-bottom: 60px !important;
+}
+
+.services-title, .section-title {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Ensure consistent padding for sections */
+#about, #services, #gallery, #reviews, .portfolio-filters {
+  padding-top: 120px !important;
+  padding-bottom: 120px !important;
+}
+
+@media (max-width: 768px) {
+  .services-header, .reviews-header, .section-title {
+    margin-bottom: 40px !important;
+  }
+  #about, #services, #gallery, #reviews, .portfolio-filters {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+  }
+}

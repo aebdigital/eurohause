@@ -5,10 +5,17 @@
 /* ===== Rolling button text ===== */
 .btn-roll {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
   overflow: hidden;
-  vertical-align: bottom;
-  line-height: 1;
+  vertical-align: middle;
+  line-height: 1.1;
+}
+
+/* Ensure buttons with RollText are centered */
+.cta-btn, .about-btn, .footer-btn, .contact-submit-btn, .service-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 .btn-roll-inner,
 .btn-roll-hover {

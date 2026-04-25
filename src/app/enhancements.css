@@ -608,3 +608,34 @@ button:hover .btn-roll-hover,
 .plain-description h4 {
   margin-top: 40px !important;
 }
+
+/* ===== Mobile Sidebar Navigation ===== */
+@media (max-width: 768px) {
+  .services-nav {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  
+  .services-nav li {
+    width: 100% !important;
+    min-width: 100% !important;
+    flex: none !important;
+  }
+
+  .service-nav-link {
+    text-align: left !important;
+    padding: 16px 20px !important;
+    font-weight: 700 !important;
+    font-size: 0.95rem !important;
+    border-radius: 4px !important;
+    background: #f5f7fa !important;
+    color: #333 !important;
+  }
+  
+  .service-nav-link.active {
+    background: #265286 !important;
+    color: #fff !important;
+    box-shadow: 0 4px 12px rgba(38, 82, 134, 0.2);
+  }
+}

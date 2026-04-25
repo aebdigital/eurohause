@@ -50,7 +50,7 @@ export default function VyrobaKonstrukciiPage() {
       service={service}
       intro="Drevené priehradové väzníky so styčníkovými doskami od firmy Mitek sú vo svete veľmi rozšírené a obľúbené. V našich končinách voči nim ale panuje istá nedôvera prameniaca z nevedomosti."
     >
-      <div className="service-description">
+      <div className="service-description plain-description">
         <h4>Priehradové väzníky MITEK:</h4>
         <p>
           Väčšina ľudí má povedomie o tom, že väzníky sú akási prútová konštrukcia, ktorá má síce
@@ -63,7 +63,7 @@ export default function VyrobaKonstrukciiPage() {
         </div>
       </div>
 
-      <div className="service-description">
+      <div className="service-description plain-description">
         <h4>Masívne Konštrukčné drevo KVH:</h4>
         <p>
           Masívne Konštrukčné drevo KVH je sortiment spoločnosti Eurohause s.r.o. Piešťany. KVH sú
@@ -90,7 +90,7 @@ export default function VyrobaKonstrukciiPage() {
         </div>
       </div>
 
-      <div className="service-description">
+      <div className="service-description plain-description">
         <h4>Automatizovaná píla EASY CUT 828 PLUS:</h4>
         <p>
           Jedna z najmodernejších a najpresnejších píl na svete so štyrmi osami a laserovým
@@ -106,7 +106,7 @@ export default function VyrobaKonstrukciiPage() {
         </div>
       </div>
 
-      <div className="service-description">
+      <div className="service-description plain-description">
         <h4>Ochrana dreva - Impregnácia:</h4>
         <p>
           Ochrana dreva je dnes už nevyhnutnou súčasťou drevárskej výroby. Naša spoločnosť
@@ -122,7 +122,7 @@ export default function VyrobaKonstrukciiPage() {
         </div>
       </div>
 
-      <div className="service-description">
+      <div className="service-description plain-description">
         <h4>Styčníkové dosky MITEK:</h4>
         <p>
           Styčníkové dosky s prelisovanými tŕňmi slúžia k efektívnemu spájaniu drevených väzníkov.
@@ -134,7 +134,7 @@ export default function VyrobaKonstrukciiPage() {
         </div>
       </div>
 
-      <div className="service-description">
+      <div className="service-description plain-description">
         <h4>Lisovanie konštrukcií:</h4>
         <p>
           Vlastné lisovanie sa prevádza pomocou portálového lisu, ktorý sa dá nastaviť na štyri

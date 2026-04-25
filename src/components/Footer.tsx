@@ -72,9 +72,6 @@ export default function Footer() {
                       <Link href="/">Domov</Link>
                     </li>
                     <li>
-                      <Link href="/sluzby">Služby</Link>
-                    </li>
-                    <li>
                       <Link href="/realizacie">Realizácie</Link>
                     </li>
                     <li>
@@ -142,13 +139,13 @@ export default function Footer() {
             <div className="footer-website-credit">
               <span>
                 Tvorba stránky -{" "}
-                <a href="https://aebdigital.com" target="_blank" rel="noopener">
+                <a href="https://aebdigital.sk" target="_blank" rel="noopener">
                   AEB Digital
                 </a>
               </span>
             </div>
             <div className="footer-copyright">
-              <p>&copy; 2024 Eurohause s.r.o. Všetky práva vyhradené.</p>
+              <p>&copy; 2026 Eurohause s.r.o. Všetky práva vyhradené.</p>
             </div>
           </div>
         </div>

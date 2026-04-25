@@ -283,6 +283,22 @@ button:hover .btn-roll-hover,
   }
 }
 
+/* ===== Footer Styling ===== */
+.footer-website-credit, .footer-copyright p {
+  font-size: 0.85rem !important;
+  color: #777 !important;
+}
+
+.footer-website-credit a {
+  color: #265286;
+  text-decoration: none;
+  transition: text-decoration 0.3s ease;
+}
+
+.footer-website-credit a:hover {
+  text-decoration: underline;
+}
+
 /* ===== Title Visibility Fixes ===== */
 .about-title, .section-title, .services-title {
   opacity: 1 !important;

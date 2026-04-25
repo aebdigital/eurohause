@@ -112,7 +112,7 @@ export default function HeroSlider() {
 
       <div className="hero-content">
         <div className="hero-text">
-          <h1 className="hero-title">Eurohause s.r.o.</h1>
+          <h1 className="hero-title">Výroba a montáž drevených konštrukcií a väzníkov</h1>
           <p className="hero-subtitle">
             Dlhoročné skúsenosti v oblasti výroby a montáže drevených konštrukcií. Používame
             moderný konštručný systém MITEK s neobmedzenou variabilitou tvaru, rýchlou výrobou a

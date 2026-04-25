@@ -203,9 +203,10 @@ export default function KontaktPage() {
                 </div>
               </div>
             </div>
-          </FadeInUp>
-        </div>
-      </section>
+          </div>
+        </FadeInUp>
+      </div>
+    </section>
 
       <section className="map-section">
         <iframe

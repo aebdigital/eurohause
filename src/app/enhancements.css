@@ -413,13 +413,17 @@ button:hover .btn-roll-hover,
 
 .dropdown-trigger {
   cursor: default;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
+  height: 100%;
+  padding: 0;
+  vertical-align: middle;
 }
 
 .dropdown-icon {
   transition: transform 0.3s ease;
+  margin-top: 1px; /* Optical centering */
 }
 
 .nav-item-dropdown:hover .dropdown-icon {

@@ -117,6 +117,7 @@ body {
     display: flex;
     list-style: none;
     gap: 40px;
+    align-items: center;
 }
 
 .nav-link {

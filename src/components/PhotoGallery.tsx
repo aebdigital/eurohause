@@ -45,7 +45,7 @@ export default function PhotoGallery({
         {photos.map((p, i) =>
           variant === "portfolio" ? (
             <div key={i} className="portfolio-item visible" onClick={() => setIdx(i)}>
-              <div className="portfolio-image-container" style={{ position: "relative", width: "100%", height: "100%", aspectRatio: "4/3" }}>
+              <div className="portfolio-image-container">
                 <Image
                   src={p.src}
                   alt={p.alt}
@@ -57,7 +57,7 @@ export default function PhotoGallery({
             </div>
           ) : (
             <div key={i} className="photo-item" onClick={() => setIdx(i)}>
-              <div className="photo-image-container" style={{ position: "relative", width: "100%", height: "100%", aspectRatio: "3/2" }}>
+              <div className="photo-image-container" style={{ position: "relative", width: "100%", aspectRatio: "3/2" }}>
                 <Image
                   src={p.src}
                   alt={p.alt}

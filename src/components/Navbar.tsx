@@ -3,19 +3,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-
-const links = [
-  { href: "/", label: "Domov" },
-  { href: "/sluzby", label: "Služby" },
-  { href: "/realizacie", label: "Realizácie" },
-  { href: "/kontakt", label: "Kontakt" },
-];
-
 import Image from "next/image";
 import RollText from "./RollText";
+import { services } from "@/lib/services";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const navRef = useRef<HTMLElement>(null);
   const pathname = usePathname();
 
@@ -53,13 +47,45 @@ export default function Navbar() {
           </Link>
         </div>
         <ul className={`nav-menu${open ? " active" : ""}`}>
-          {links.map((l) => (
-            <li key={l.href}>
-              <Link href={l.href} className="nav-link" onClick={() => setOpen(false)}>
-                <RollText text={l.label} />
-              </Link>
-            </li>
-          ))}
+          <li>
+            <Link href="/" className="nav-link" onClick={() => setOpen(false)}>
+              <RollText text="Domov" />
+            </Link>
+          </li>
+          <li 
+            className={`nav-item-dropdown ${dropdownOpen ? 'open' : ''}`}
+            onMouseEnter={() => setDropdownOpen(true)}
+            onMouseLeave={() => setDropdownOpen(false)}
+          >
+            <span 
+              className="nav-link dropdown-trigger"
+              onClick={() => setDropdownOpen(!dropdownOpen)}
+            >
+              <RollText text="Služby" />
+              <svg className="dropdown-icon" width="10" height="6" viewBox="0 0 10 6" fill="none">
+                <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </span>
+            <ul className="dropdown-menu">
+              {services.map((s) => (
+                <li key={s.slug}>
+                  <Link href={`/sluzby/${s.slug}`} onClick={() => { setOpen(false); setDropdownOpen(false); }}>
+                    {s.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </li>
+          <li>
+            <Link href="/realizacie" className="nav-link" onClick={() => setOpen(false)}>
+              <RollText text="Realizácie" />
+            </Link>
+          </li>
+          <li>
+            <Link href="/kontakt" className="nav-link" onClick={() => setOpen(false)}>
+              <RollText text="Kontakt" />
+            </Link>
+          </li>
         </ul>
         <div
           className={`hamburger${open ? " active" : ""}`}

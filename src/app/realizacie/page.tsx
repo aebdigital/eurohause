@@ -80,6 +80,8 @@ const portfolio = [
   "d3b50215-543c-49df-8e10-368546e9edb1.JPG",
 ].map((f) => ({ src: `/sources/new-photo/${f}`, alt: "Eurohause realizácie" }));
 
+import FadeInUp from "@/components/FadeInUp";
+
 export default function RealizaciePage() {
   return (
     <>
@@ -103,14 +105,18 @@ export default function RealizaciePage() {
         </div>
         <div className="contact-hero-content">
           <div className="container">
-            <h1 className="contact-hero-title">Realizácie</h1>
+            <FadeInUp keyId="realizacie-title">
+              <h1 className="contact-hero-title">Realizácie</h1>
+            </FadeInUp>
           </div>
         </div>
       </section>
 
       <section className="portfolio-filters">
         <div className="container">
-          <PhotoGallery photos={portfolio} variant="portfolio" />
+          <FadeInUp keyId="realizacie-grid" delay={0.2}>
+            <PhotoGallery photos={portfolio} variant="portfolio" />
+          </FadeInUp>
         </div>
       </section>
     </>

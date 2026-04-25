@@ -74,6 +74,7 @@ export default function ServiceDetailShell({
         <div className="contact-hero-content">
           <div className="container">
             <motion.h1
+              key={service.slug + "-title"}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -92,9 +93,9 @@ export default function ServiceDetailShell({
             <div className="services-main">
               <div className="service-detail active">
                 <motion.div
+                  key={service.slug + "-header"}
                   initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
                   className="service-header"
                 >
@@ -102,9 +103,9 @@ export default function ServiceDetailShell({
                   <h2>{service.title}</h2>
                 </motion.div>
                 <motion.div
+                  key={service.slug + "-content"}
                   initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className="service-content"
                 >

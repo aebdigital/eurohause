@@ -50,6 +50,8 @@ const breadcrumbsLd = {
   ],
 };
 
+import FadeInUp from "@/components/FadeInUp";
+
 export default function KontaktPage() {
   return (
     <>
@@ -73,21 +75,24 @@ export default function KontaktPage() {
         </div>
         <div className="contact-hero-content">
           <div className="container">
-            <h1 className="contact-hero-title">Kontakt</h1>
+            <FadeInUp keyId="kontakt-title">
+              <h1 className="contact-hero-title">Kontakt</h1>
+            </FadeInUp>
           </div>
         </div>
       </section>
 
       <section className="contact-section">
         <div className="container">
-          <div className="contact-grid">
-            <div className="contact-form-wrapper">
-              <h2>Napíšte nám</h2>
-              <ContactForm />
-            </div>
+          <FadeInUp keyId="kontakt-grid" delay={0.2}>
+            <div className="contact-grid">
+              <div className="contact-form-wrapper">
+                <h2>Napíšte nám</h2>
+                <ContactForm />
+              </div>
 
-            <div className="contact-info-wrapper">
-              <div className="contact-info-item">
+              <div className="contact-info-wrapper">
+                <div className="contact-info-item">
                 <div className="contact-icon">
                   <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
                     <path
@@ -198,7 +203,7 @@ export default function KontaktPage() {
                 </div>
               </div>
             </div>
-          </div>
+          </FadeInUp>
         </div>
       </section>
 

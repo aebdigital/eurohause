@@ -140,7 +140,7 @@ export default function HeroSlider() {
             <Link href="/realizacie" className="cta-btn primary">
               <RollText text="PROJEKTY" />
             </Link>
-            <Link href="/sluzby" className="cta-btn secondary" style={{ pointerEvents: "none", opacity: 0.7 }}>
+            <Link href="#services" className="cta-btn secondary">
               <RollText text="NAŠE SLUŽBY" />
             </Link>
           </motion.div>

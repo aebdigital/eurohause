@@ -283,6 +283,19 @@ button:hover .btn-roll-hover,
   }
 }
 
+/* ===== Title Visibility Fixes ===== */
+.about-title, .section-title, .services-title {
+  opacity: 1 !important;
+  transform: none !important;
+  color: #111 !important;
+  -webkit-text-stroke: 0 !important;
+  text-stroke: 0 !important;
+}
+
+.about-title::before, .section-title::before, .services-title::before {
+  display: none !important;
+}
+
 /* ===== 3x1 Gallery Grid ===== */
 .photo-grid-3x1 {
   display: grid;

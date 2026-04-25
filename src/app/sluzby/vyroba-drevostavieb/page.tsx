@@ -25,7 +25,6 @@ const photos = [
   { src: "/sources/drevostavby/2012-09-28-213-2-large.jpg", alt: "Drevostava v procese výstavby" },
   { src: "/sources/drevostavby/IMG-20170330-WA0039-large.jpg", alt: "Kompletná drevostava" },
   { src: "/sources/drevostavby/IMG_0525-large-2.jpg", alt: "Drevené konštrukcie" },
-  { src: "/sources/drevostavby/e5-large.jpg", alt: "Výroba drevostavieb" },
   { src: "/sources/drevostavby/200.JPG", alt: "Výroba drevostavieb" },
   { src: "/sources/drevostavby/201.JPG", alt: "Výroba drevostavieb" },
   { src: "/sources/drevostavby/202.JPG", alt: "Výroba drevostavieb" },

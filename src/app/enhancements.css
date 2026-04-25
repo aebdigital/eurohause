@@ -579,3 +579,22 @@ button:hover .btn-roll-hover,
     padding-bottom: 80px !important;
   }
 }
+
+/* ===== Hero Parallax Support ===== */
+.hero, .contact-hero {
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-background, .contact-hero-bg {
+  height: 120% !important;
+  top: -10% !important;
+  width: 100% !important;
+  position: absolute !important;
+  will-change: transform;
+}
+
+.hero-bg-image, .contact-hero-bg img {
+  height: 100% !important;
+  object-fit: cover !important;
+}

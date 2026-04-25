@@ -3,6 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import RollText from "./RollText";
 
 const heroImages = [
   { src: "/sources/new-photo/33cc9fd9-d8d0-4b98-ad3c-f8a02e40e871.JPG", alt: "Eurohause drevené konštrukcie 1" },
@@ -38,14 +40,13 @@ const testimonials = [
   },
 ];
 
-import RollText from "./RollText";
-
 export default function HeroSlider() {
   const [imgIdx, setImgIdx] = useState(0);
   const [tIdx, setTIdx] = useState(0);
   const stat1Ref = useRef<HTMLDivElement>(null);
   const stat2Ref = useRef<HTMLDivElement>(null);
-  const bgRef = useRef<HTMLDivElement>(null);
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 800], [0, 200]);
 
   useEffect(() => {
     const a = setInterval(() => setImgIdx((i) => (i + 1) % heroImages.length), 5000);
@@ -96,7 +97,7 @@ export default function HeroSlider() {
 
   return (
     <section id="home" className="hero">
-      <div className="hero-background" ref={bgRef}>
+      <motion.div className="hero-background" style={{ y }}>
         {heroImages.map((img, i) => (
           <Image
             key={img.src}
@@ -108,27 +109,49 @@ export default function HeroSlider() {
             style={{ objectFit: "cover" }}
           />
         ))}
-      </div>
+      </motion.div>
 
       <div className="hero-content">
         <div className="hero-text">
-          <h1 className="hero-title">Výroba a montáž drevených konštrukcií a väzníkov</h1>
-          <p className="hero-subtitle">
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="hero-title"
+          >
+            Výroba a montáž drevených konštrukcií a väzníkov
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="hero-subtitle"
+          >
             Dlhoročné skúsenosti v oblasti výroby a montáže drevených konštrukcií. Používame
             moderný konštručný systém MITEK s neobmedzenou variabilitou tvaru, rýchlou výrobou a
             montážou.
-          </p>
-          <div className="hero-actions">
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="hero-actions"
+          >
             <Link href="/realizacie" className="cta-btn primary">
               <RollText text="PROJEKTY" />
             </Link>
-            <Link href="/sluzby" className="cta-btn secondary">
+            <Link href="/sluzby" className="cta-btn secondary" style={{ pointerEvents: "none", opacity: 0.7 }}>
               <RollText text="NAŠE SLUŽBY" />
             </Link>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="hero-right">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="hero-right"
+        >
           <div className="hero-stats">
             <div className="stat-item" ref={stat1Ref}>
               <div className="stat-number">
@@ -169,7 +192,7 @@ export default function HeroSlider() {
           <a href="#reviews" className="more-testimonials">
             VIAC REFERENCIÍ
           </a>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { motion, useScroll, useTransform } from "framer-motion";
 import ServicesSidebar from "./ServicesSidebar";
 import { SITE_URL, type ServiceSummary } from "@/lib/services";
 
@@ -12,6 +15,8 @@ export default function ServiceDetailShell({
   children: React.ReactNode;
 }) {
   const url = `${SITE_URL}/sluzby/${service.slug}`;
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 500], [0, 150]);
 
   const breadcrumbsLd = {
     "@context": "https://schema.org",
@@ -57,7 +62,7 @@ export default function ServiceDetailShell({
       />
 
       <section className="contact-hero">
-        <div className="contact-hero-bg">
+        <motion.div className="contact-hero-bg" style={{ y }}>
           <Image
             src="/sources/new-photo/IMG-20250801-WA0004.jpg"
             alt={service.title}
@@ -65,10 +70,17 @@ export default function ServiceDetailShell({
             priority
             style={{ objectFit: "cover" }}
           />
-        </div>
+        </motion.div>
         <div className="contact-hero-content">
           <div className="container">
-            <h1 className="contact-hero-title">{service.title}</h1>
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="contact-hero-title"
+            >
+              {service.title}
+            </motion.h1>
           </div>
         </div>
       </section>
@@ -79,14 +91,26 @@ export default function ServiceDetailShell({
             <ServicesSidebar />
             <div className="services-main">
               <div className="service-detail active">
-                <div className="service-header">
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                  className="service-header"
+                >
                   <span className="service-number">{service.num}</span>
                   <h2>{service.title}</h2>
-                </div>
-                <div className="service-content">
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="service-content"
+                >
                   <p className="service-intro">{intro}</p>
                   {children}
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>
